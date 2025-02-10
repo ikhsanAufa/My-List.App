@@ -34,6 +34,10 @@
 </head>
 
 <body>
+    <div class="container-fluid position-relative d-flex p-0" style="overflow-x: hidden;">
+        @include('partials.sidebar')
+
+    </div>
 
 </body>
 
