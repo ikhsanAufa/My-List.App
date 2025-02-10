@@ -79,6 +79,11 @@
                     <input type="text" class="form-control bg-dark text-light" id="name" name="name"
                         placeholder="Masukkan nama task perubahan">
                 </div>
+                <div class="mb-3">
+                    <label for="description" class="form-label">Deskripsi</label>
+                    <input type="text" class="form-control bg-dark text-light" id="description"
+                        name="description" placeholder="Masukkan deskripsi perubahan">
+                </div>
             </div>
             <div class="modal-footer border-0">
                 <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Batal</button>
