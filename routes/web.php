@@ -6,3 +6,5 @@ use Illuminate\Support\Facades\Route;
 
 // Membuat route untuk home
 Route::get('/', [TaskController::class, 'index'])->name('home');
+
+Route::resource('lists', TaskListController::class);
