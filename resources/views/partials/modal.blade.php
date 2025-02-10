@@ -84,6 +84,15 @@
                     <input type="text" class="form-control bg-dark text-light" id="description"
                         name="description" placeholder="Masukkan deskripsi perubahan">
                 </div>
+                <div class="mb-4">
+                    <label for="color" class="form-label">Pilih Prioritas:</label>
+                    <select id="priority" name="priority" class="form-control bg-dark text-light">
+                        <option value="">-</option>
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                </div>
             </div>
             <div class="modal-footer border-0">
                 <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Batal</button>
