@@ -89,6 +89,29 @@
                                                 </form>
                                             </div>
                                         </div>
+                                        <div class="card-body bg-secondary">
+                                            <p class="card-text text-truncate">
+                                                {{ $task->description }}
+                                            </p>
+                                        </div>
+                                        @if (!$task->is_completed)
+                                            <form action="{{ route('tasks.complete', $task->id) }}" method="POST">
+                                                @csrf
+                                                @method('PATCH')
+                                                <button type="submit" class="btn btn-sm btn-outline-success w-95">
+                                                    <i class="bi bi-check2-circle"></i>
+                                                    Selesai
+                                                </button>
+                                                <form action="">
+                                                    <button type="button" class="btn btn-sm btn-outline-warning w-95"
+                                                        data-bs-toggle="modal" data-bs-target="#editTaskModal"
+                                                        data-list="{{ $list->id }}">
+                                                        <i class="bi bi-pencil-fill"></i>
+                                                        Edit
+                                                    </button>
+                                                </form>
+                                            </form>
+                                        @endif
                                     </div>
                                 @endif
                             @endforeach
