@@ -15,6 +15,9 @@
                         placeholder="Masukkan nama list">
                 </div>
             </div>
+            <div class="modal-footer border-0">
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Batal</button>
+            </div>
         </form>
     </div>
 </div>
