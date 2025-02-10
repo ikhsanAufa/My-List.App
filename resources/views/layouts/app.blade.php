@@ -46,6 +46,21 @@
             @include('partials.modal')
         </div>
         <!-- Content End -->
+
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="{{ asset('assets/lib/bootstrap/js/bootstrap.min.js') }}"></script>
+        <script src="{{ asset('assets/lib/chart/chart.min.js') }}"></script>
+        <script src="{{ asset('assets/lib/easing/easing.min.js') }}"></script>
+        <script src="{{ asset('assets/lib/waypoints/waypoints.min.js') }}"></script>
+        <script src="{{ asset('assets/lib/owlcarousel/owl.carousel.min.js') }}"></script>
+        <script src="{{ asset('assets/lib/tempusdominus/js/moment.min.js') }}"></script>
+        <script src="{{ asset('assets/lib/tempusdominus/js/moment-timezone.min.js') }}"></script>
+        <script src="{{ asset('assets/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js') }}"></script>
+
+        <!-- Template Javascript -->
+        <script src="{{ asset('assets/js/main.js') }}"></script>
+        <script src="{{ asset('assets/js/script.js') }}"></script>
 </body>
 
 </html>
