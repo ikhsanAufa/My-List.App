@@ -104,6 +104,13 @@
                             <p class="card-text">{{ $list->tasks->count() }}</p>
                         </div>
                     </div>
+                @endforeach
+                <button class="btn btn-outline-primary flex-shrink-0" style="height: fit-content;" data-bs-toggle="modal"
+                    data-bs-target="#addListModal">
+                    <span class="d-flex align-items-center justify-content-center">
+                        <i class="bi bi-plus fs-5"></i>
+                    </span>
+                </button>
             </div>
         </div>
     </div>
