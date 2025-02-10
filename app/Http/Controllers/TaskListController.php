@@ -19,4 +19,10 @@ class TaskListController extends Controller
         return redirect()->back();
 
     }
+
+    public function destroy($id) {
+        TaskList::findOrFail($id)->delete();
+
+        return redirect()->back();
+    }
 }
