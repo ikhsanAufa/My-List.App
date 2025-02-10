@@ -74,6 +74,10 @@
                                                         class="fw-bold lh-1 m-0 {{ $task->is_completed ? 'text-decoration-line-through' : '' }}">
                                                         {{ $task->name }}
                                                     </a>
+                                                    <span class="badge text-bg-{{ $task->priorityClass }} badge-pill"
+                                                        style="width: fit-content">
+                                                        {{ $task->priority }}
+                                                    </span>
                                                 </div>
                                             </div>
                                         </div>
