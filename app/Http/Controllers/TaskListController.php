@@ -12,6 +12,11 @@ class TaskListController extends Controller
             'name' => 'required|max:100'
         ]);
 
+        TaskList::create([
+            'name' => $request->name
+        ]);
+
         return redirect()->back();
+
     }
 }
