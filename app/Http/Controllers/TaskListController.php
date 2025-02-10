@@ -17,7 +17,6 @@ class TaskListController extends Controller
         ]);
 
         return redirect()->back();
-
     }
 
     public function destroy($id) {
