@@ -58,6 +58,9 @@
                             <form action="{{ route('lists.destroy', $list->id) }}" method="POST" style="display: inline">
                                 @csrf
                                 @method('DELETE')
+                                <button type="submit" class="btn btn-sm p-0">
+                                    <i class="bi bi-trash fs-5 text-dark"></i>
+                                </button>
                             </form>
                         </div>
                     </div>
