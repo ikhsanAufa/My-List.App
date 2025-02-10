@@ -8,3 +8,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [TaskController::class, 'index'])->name('home');
 
 Route::resource('lists', TaskListController::class);
+
+Route::resource('tasks', TaskController::class);
