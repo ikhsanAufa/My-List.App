@@ -19,4 +19,12 @@ class TaskController extends Controller
         return view('pages.home', $data);
     }
 
+    public function store(Request $request) {
+        $request->validate([
+            'name' => 'required|max:100',
+            'list_id' => 'required',
+            'description' => 'nullable|max:100',
+            'priority' => 'required|in:high,medium,low',
+        ]);
+
 }
