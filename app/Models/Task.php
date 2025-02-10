@@ -21,4 +21,10 @@ class Task extends Model
         'updated_at'
     ];
 
+    const PRIORITIES = [
+        'low',
+        'medium',
+        'high'
+    ];
+
 }
