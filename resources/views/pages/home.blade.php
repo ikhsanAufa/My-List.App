@@ -100,6 +100,11 @@
                                 </span>
                             </button>
                         </div>
+                        <div class="card-footer d-flex justify-content-between align-items-center">
+                            <p class="card-text">{{ $list->tasks->count() }}</p>
+                        </div>
                     </div>
             </div>
-        @endsection
+        </div>
+    </div>
+@endsection
