@@ -79,6 +79,14 @@
                                                         {{ $task->priority }}
                                                     </span>
                                                 </div>
+                                                <form action="{{ route('tasks.destroy', $task->id) }}" method="POST"
+                                                    style="display: inline;">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button type="submit" class="btn btn-sm p-0">
+                                                        <i class="bi bi-x-circle text-danger fs-5"></i>
+                                                    </button>
+                                                </form>
                                             </div>
                                         </div>
                                     </div>
