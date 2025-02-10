@@ -17,6 +17,9 @@
         <a href="#" class="sidebar-toggler flex-shrink-0">
             <i class="fa fa-bars"></i>
         </a>
+        <form class="d-none d-md-flex ms-4">
+            <input class="form-control bg-dark border-0" type="search" placeholder="Search" />
+        </form>
     </nav>
     <!-- Navbar End -->
 
