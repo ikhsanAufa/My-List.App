@@ -63,6 +63,24 @@
                                 </button>
                             </form>
                         </div>
+                        <div class="card-body d-flex flex-column gap-2 overflow-x-hidden">
+                            @foreach ($tasks as $task)
+                                @if ($task->list_id == $list->id)
+                                    <div class="card bg-dark my-2">
+                                        <div class="card-header pt-3">
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <div class="d-flex flex-column justify-content-center gap-2">
+                                                    <a href="{{ route('tasks.show', $task->id) }}"
+                                                        class="fw-bold lh-1 m-0 {{ $task->is_completed ? 'text-decoration-line-through' : '' }}">
+                                                        {{ $task->name }}
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endif
+                            @endforeach
+                        </div>
                     </div>
             </div>
         @endsection
