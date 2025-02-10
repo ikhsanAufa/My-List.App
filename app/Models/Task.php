@@ -27,4 +27,16 @@ class Task extends Model
         'high'
     ];
 
+    public function getPriorityClassAttribute() {
+        return match($this->attributes['priority']) {
+            'low' => 'success',
+            'medium' => 'warning',
+            'high' => 'danger',
+            default => 'secondary'
+        };
+    }
+
+    public function list() {
+        return $this->belongsTo(TaskList::class, 'list_id');
+    }
 }
