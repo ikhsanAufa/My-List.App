@@ -41,9 +41,11 @@
         <div class="content overflow-x-hidden">
             @include('partials.navbar')
 
+            @yield('content')
+
+            @include('partials.modal')
         </div>
         <!-- Content End -->
-
 </body>
 
 </html>
