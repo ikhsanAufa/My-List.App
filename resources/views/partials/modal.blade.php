@@ -17,6 +17,7 @@
             </div>
             <div class="modal-footer border-0">
                 <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Batal</button>
+                <button type="submit" class="btn btn-outline-primary">Tambah</button>
             </div>
         </form>
     </div>
