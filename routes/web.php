@@ -10,3 +10,4 @@ Route::get('/', [TaskController::class, 'index'])->name('home');
 Route::resource('lists', TaskListController::class);
 
 Route::resource('tasks', TaskController::class);
+Route::patch('/tasks/{task}/complete', [TaskController::class, 'complete'])->name('tasks.complete');
