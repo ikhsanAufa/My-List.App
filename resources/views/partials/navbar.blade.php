@@ -20,6 +20,9 @@
         <form class="d-none d-md-flex ms-4">
             <input class="form-control bg-dark border-0" type="search" placeholder="Search" />
         </form>
+        <button class="mx-2 btn btn-outline-dark btn-sm">
+            <i class="mx-2 my-2 bi bi-search-heart fs-4 text-primary"></i>
+        </button>
     </nav>
     <!-- Navbar End -->
 
