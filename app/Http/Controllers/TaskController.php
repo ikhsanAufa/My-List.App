@@ -36,4 +36,19 @@ class TaskController extends Controller
 
 
         return redirect()->back();
+    }
+
+    public function complete($id) {
+        Task::findOrFail($id)->update([
+            'is_completed' => true
+        ]);
+
+        return redirect()->back();
+    }
+
+    public function destroy($id) {
+        Task::findOrFail($id)->delete();
+
+        return redirect()->back();
+    }
 }
