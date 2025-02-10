@@ -43,3 +43,23 @@
         </div>
     </div>
     <!-- Sale & Revenue End -->
+
+    <div class="container-fluid pt-4 px-4 overflow-x-hidden">
+        <div class="row">
+            @if ($lists->count() == 0)
+                <p class="text-center">Please add your assignment</p>
+            @endif
+
+            <div class="d-flex gap-3 flex-nowrap" style="height: 100vh; overflow-x: scroll; overflow-y: hidden;">
+                @foreach ($lists as $list)
+                    <div class="card bg-secondary flex-shrink-0" style="width: 18rem; max-height: 95vh;">
+                        <div class="card-header bg-primary d-flex align-items-center justify-content-between">
+                            <h4 class="card-title">{{ $list->name }}</h4>
+                            <form action="{{ route('lists.destroy', $list->id) }}" method="POST" style="display: inline">
+                                @csrf
+                                @method('DELETE')
+                            </form>
+                        </div>
+                    </div>
+            </div>
+        @endsection
