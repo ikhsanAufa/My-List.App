@@ -27,4 +27,13 @@ class TaskController extends Controller
             'priority' => 'required|in:high,medium,low',
         ]);
 
+        Task::create([
+            'name' => $request->name,
+            'list_id' => $request->list_id,
+            'description' => $request->description,
+            'priority' => $request->priority
+        ]);
+
+
+        return redirect()->back();
 }
