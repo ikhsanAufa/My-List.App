@@ -37,7 +37,12 @@
     <div class="container-fluid position-relative d-flex p-0" style="overflow-x: hidden;">
         @include('partials.sidebar')
 
-    </div>
+        <!-- Content Start -->
+        <div class="content overflow-x-hidden">
+            @include('partials.navbar')
+
+        </div>
+        <!-- Content End -->
 
 </body>
 
