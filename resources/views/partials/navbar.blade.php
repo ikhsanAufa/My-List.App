@@ -89,7 +89,10 @@
             });
 
             // Event listener untuk menghapus notifikasi
-            document.getElementById('notificationDropdown').addEventListener('click', function() {});
+            document.getElementById('notificationDropdown').addEventListener('click', function() {
+                // Menghapus notifikasi dari LocalStorage
+                localStorage.removeItem('notification');
+            });
         });
     </script>
 
