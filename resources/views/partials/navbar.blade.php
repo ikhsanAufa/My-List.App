@@ -81,7 +81,10 @@
             }
 
             // Menambahkan event listener untuk menghilangkan tanda notifikasi saat toggle notifikasi
-            document.getElementById('notificationToggle').addEventListener('click', function() {});
+            document.getElementById('notificationToggle').addEventListener('click', function() {
+                // Menyembunyikan indikator setelah notifikasi dibaca
+                document.getElementById('notificationBadge').classList.remove('show');
+            });
 
         });
     </script>
