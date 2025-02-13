@@ -92,6 +92,9 @@
             document.getElementById('notificationDropdown').addEventListener('click', function() {
                 // Menghapus notifikasi dari LocalStorage
                 localStorage.removeItem('notification');
+                // Mengosongkan dropdown dan menyembunyikan indikator titik merah
+                document.getElementById('notificationDropdown').innerHTML = '';
+                document.getElementById('notificationBadge').classList.remove('show');
             });
         });
     </script>
