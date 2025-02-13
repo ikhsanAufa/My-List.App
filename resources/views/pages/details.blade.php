@@ -31,10 +31,6 @@
                         <textarea class="form-control" name="description" id="description" rows="3" placeholder="Masukkan deskripsi">{{ $task->description }}</textarea>
                     </div>
                 </div>
-                <div class="modal-footer bg-dark">
-                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Batal</button>
-                    <button type="submit" class="btn btn-outline-primary">Simpan Perubahan</button>
-                </div>
             </form>
         </div>
     </div>
