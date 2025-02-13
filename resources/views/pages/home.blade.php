@@ -44,16 +44,17 @@
     </div>
     <!-- Sale & Revenue End -->
 
-    <div class="container-fluid pt-4 px-4 overflow-x-hidden">
+    <div class="container-fluid pt-4 px-4 overflow-y-hidden">
         <div class="row">
             @if ($lists->count() == 0)
                 <p class="text-center">Please add your assignment</p>
             @endif
 
-            <div class="d-flex gap-3 flex-nowrap" style="height: 100vh; overflow-x: scroll; overflow-y: hidden;">
+            <div class="d-flex gap-3 flex-nowrap overflow-y-scroll" style="height: 100vh;">
                 @foreach ($lists as $list)
-                    <div class="card bg-secondary flex-shrink-0" style="width: 18rem; max-height: 95vh;">
-                        <div class="card-header bg-primary d-flex align-items-center justify-content-between">
+                    <div class="card overflow-auto bg-secondary flex-shrink-0" style="width: 18rem; max-height: 95vh;">
+                        <div
+                            class="card-header overflow-y-hidden bg-primary d-flex align-items-center justify-content-between">
                             <h4 class="card-title">{{ $list->name }}</h4>
                             <form action="{{ route('lists.destroy', $list->id) }}" method="POST" style="display: inline">
                                 @csrf
@@ -71,7 +72,7 @@
                                             <div class="d-flex align-items-center justify-content-between">
                                                 <div class="d-flex flex-column justify-content-center gap-2">
                                                     <a href="{{ route('tasks.show', $task->id) }}"
-                                                        class="fw-bold lh-1 m-0 {{ $task->is_completed ? 'text-decoration-line-through' : '' }}">
+                                                        class="fw-bold lh-1 m-0 text-decoration-none text-{{ $task->priorityClass }} {{ $task->is_completed ? 'text-decoration-line-through' : '' }}">
                                                         {{ $task->name }}
                                                     </a>
                                                     <span class="badge text-bg-{{ $task->priorityClass }} badge-pill"
@@ -98,18 +99,10 @@
                                             <form action="{{ route('tasks.complete', $task->id) }}" method="POST">
                                                 @csrf
                                                 @method('PATCH')
-                                                <button type="submit" class="btn btn-sm btn-outline-success w-95">
+                                                <button type="submit" class="btn btn-sm btn-outline-success w-100">
                                                     <i class="bi bi-check2-circle"></i>
                                                     Selesai
                                                 </button>
-                                                <form action="">
-                                                    <button type="button" class="btn btn-sm btn-outline-warning w-95"
-                                                        data-bs-toggle="modal" data-bs-target="#editTaskModal"
-                                                        data-list="{{ $list->id }}">
-                                                        <i class="bi bi-pencil-fill"></i>
-                                                        Edit
-                                                    </button>
-                                                </form>
                                             </form>
                                         @endif
                                     </div>
@@ -123,8 +116,8 @@
                                 </span>
                             </button>
                         </div>
-                        <div class="card-footer d-flex justify-content-between align-items-center">
-                            <p class="card-text">{{ $list->tasks->count() }}</p>
+                        <div class="card-footer bg-primary text-dark d-flex justify-content-between align-items-center">
+                            <p class="card-text">{{ $list->tasks->count() }} Tugas</p>
                         </div>
                     </div>
                 @endforeach
