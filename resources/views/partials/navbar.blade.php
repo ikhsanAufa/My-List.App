@@ -61,7 +61,10 @@
 
             // Cek apakah ada notifikasi baru yang disimpan di LocalStorage
             let savedNotification = localStorage.getItem('notification');
-            if (savedNotification) {}
+            if (savedNotification) {
+                // Jika ada notifikasi yang disimpan, tampilkan di dropdown
+                document.getElementById('notificationDropdown').innerHTML = `<p>${savedNotification}</p>`;
+            }
         });
     </script>
 
