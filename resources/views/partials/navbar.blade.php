@@ -69,7 +69,10 @@
             }
 
             // Jika ada pesan dari session, simpan di LocalStorage dan tampilkan
-            if (successMessage) {}
+            if (successMessage) {
+                // Simpan notifikasi ke LocalStorage
+                localStorage.setItem('notification', successMessage);
+            }
 
         });
     </script>
