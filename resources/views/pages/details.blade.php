@@ -20,10 +20,10 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body bg-secondary">
-                    <input type="text" name="list_id" hidden>
+                    <input type="text" value="{{ $task->list_id }}" name="list_id" hidden>
                     <div class="mb-3">
                         <label for="name" class="form-label">Nama</label>
-                        <input type="text" class="form-control" id="name" name="name"
+                        <input type="text" class="form-control" id="name" name="name" value="{{ $task->name }}"
                             placeholder="Masukkan nama list">
                     </div>
                 </div>
