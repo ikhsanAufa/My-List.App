@@ -72,6 +72,10 @@
             if (successMessage) {
                 // Simpan notifikasi ke LocalStorage
                 localStorage.setItem('notification', successMessage);
+
+                // Tampilkan pesan notifikasi pada dropdown
+                document.getElementById('notificationDropdown').innerHTML = `<p>${successMessage}</p>`;
+
             }
 
         });
