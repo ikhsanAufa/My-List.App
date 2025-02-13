@@ -26,6 +26,10 @@
                         <input type="text" class="form-control" id="name" name="name" value="{{ $task->name }}"
                             placeholder="Masukkan nama list">
                     </div>
+                    <div class="mb-3">
+                        <label for="description" class="form-label">Deskripsi</label>
+                        <textarea class="form-control" name="description" id="description" rows="3" placeholder="Masukkan deskripsi"></textarea>
+                    </div>
                 </div>
             </form>
         </div>
