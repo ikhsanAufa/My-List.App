@@ -43,6 +43,13 @@
                     <!-- Notifikasi akan muncul di sini -->
                 </div>
             </div>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link">
+                    <img class="rounded-circle me-lg-2" src="assets/img/admin.jpeg" alt=""
+                        style="width: 40px; height: 40px" />
+                    <span class="d-none d-lg-inline-flex">Ikhsan Aufa</span>
+                </a>
+            </div>
         </div>
     </nav>
     <!-- Navbar End -->
