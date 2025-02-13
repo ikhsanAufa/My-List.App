@@ -35,7 +35,7 @@
                         <select class="form-control bg-dark" name="priority" id="priority">
                             <option value="low" @selected($task->priority == 'low')>Low</option>
                             <option value="medium" @selected($task->priority == 'medium')>Medium</option>
-                            <option value="high">High</option>
+                            <option value="high" @selected($task->priority == 'high')>High</option>
                         </select>
                     </div>
                 </div>
