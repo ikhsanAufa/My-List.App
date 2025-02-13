@@ -67,6 +67,10 @@
                 // Tampilkan indikator titik merah
                 document.getElementById('notificationBadge').classList.add('show');
             }
+
+            // Jika ada pesan dari session, simpan di LocalStorage dan tampilkan
+            if (successMessage) {}
+
         });
     </script>
 
