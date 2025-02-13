@@ -64,6 +64,8 @@
             if (savedNotification) {
                 // Jika ada notifikasi yang disimpan, tampilkan di dropdown
                 document.getElementById('notificationDropdown').innerHTML = `<p>${savedNotification}</p>`;
+                // Tampilkan indikator titik merah
+                document.getElementById('notificationBadge').classList.add('show');
             }
         });
     </script>
