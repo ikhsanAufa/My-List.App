@@ -76,6 +76,8 @@
                 // Tampilkan pesan notifikasi pada dropdown
                 document.getElementById('notificationDropdown').innerHTML = `<p>${successMessage}</p>`;
 
+                // Tampilkan indikator titik merah
+                document.getElementById('notificationBadge').classList.add('show');
             }
 
         });
