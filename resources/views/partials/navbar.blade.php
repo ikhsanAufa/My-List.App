@@ -58,6 +58,10 @@
         window.addEventListener('load', function() {
             // Cek apakah ada pesan baru yang belum dibaca di session
             let successMessage = "{{ session('success') }}"; // Ambil pesan dari Laravel session
+
+            // Cek apakah ada notifikasi baru yang disimpan di LocalStorage
+            let savedNotification = localStorage.getItem('notification');
+            if (savedNotification) {}
         });
     </script>
 
