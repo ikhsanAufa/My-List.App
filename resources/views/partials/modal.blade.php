@@ -72,14 +72,6 @@
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
                     aria-label="Close"></button>
             </div>
-            <div class="modal-body">
-                <input type="text" id="taskListId" name="list_id" hidden>
-                <div class="mb-3">
-                    <label for="name" class="form-label">Nama Task</label>
-                    <input type="text" class="form-control bg-dark text-light" id="name" name="name"
-                        placeholder="Masukkan nama task perubahan">
-                </div>
-            </div>
         </form>
     </div>
 </div>
