@@ -33,7 +33,7 @@
                     <div class="mb-3">
                         <label for="priority" class="form-label">Priority</label>
                         <select class="form-control bg-dark" name="priority" id="priority">
-                            <option value="low">Low</option>
+                            <option value="low" @selected($task->priority == 'low')>Low</option>
                             <option value="medium">Medium</option>
                             <option value="high">High</option>
                         </select>
