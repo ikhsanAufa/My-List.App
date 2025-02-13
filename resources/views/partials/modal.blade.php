@@ -62,11 +62,3 @@
         </form>
     </div>
 </div>
-<div class="modal fade" id="editTaskModal" tabindex="-1" aria-labelledby="addTaskModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <form action="{{ route('tasks.store') }}" method="POST" class="modal-content bg-secondary text-light">
-            @method('POST')
-            @csrf
-        </form>
-    </div>
-</div>
