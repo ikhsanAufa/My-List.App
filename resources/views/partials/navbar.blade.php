@@ -42,6 +42,11 @@
                 transform: translate(50%, -50%) scale(1.2);
                 /* Membesar sedikit */
             }
+
+            100% {
+                transform: translate(50%, -50%) scale(1);
+                /* Kembali ke ukuran semula */
+            }
         }
     </style>
 
