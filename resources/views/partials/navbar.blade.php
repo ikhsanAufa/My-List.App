@@ -30,6 +30,14 @@
         .notification-badge.show {
             display: block;
         }
+
+        /* Animasi pulse untuk efek berkedip */
+        @keyframes pulse {
+            0% {
+                transform: translate(50%, -50%) scale(1);
+                /* Skala normal */
+            }
+        }
     </style>
 
     <!-- Navbar Start -->
