@@ -25,6 +25,11 @@
             animation: pulse 1s infinite;
             /* Menambahkan animasi pulse */
         }
+
+        /* Menampilkan badge notifikasi jika ada notifikasi baru */
+        .notification-badge.show {
+            display: block;
+        }
     </style>
 
     <!-- Navbar Start -->
