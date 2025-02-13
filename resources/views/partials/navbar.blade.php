@@ -19,8 +19,9 @@
         </a>
         <div class="row my-3">
             <div class="col-10 mx-auto">
-                <form action="" method="GET" class="d-flex gap-2">
-                    <input type="text" class="form-control" name="query" placeholder="Cari tugas atau list...">
+                <form action="{{ route('home') }}" method="GET" class="d-flex gap-2">
+                    <input type="text" class="form-control" name="query" placeholder="Cari tugas atau list..."
+                        value="{{ request()->query('query') }}">
                     <button type="submit" class="btn btn-outline-primary"><i class="bi bi-search-heart"></i></button>
                 </form>
             </div>
