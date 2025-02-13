@@ -80,6 +80,9 @@
                 document.getElementById('notificationBadge').classList.add('show');
             }
 
+            // Menambahkan event listener untuk menghilangkan tanda notifikasi saat toggle notifikasi
+            document.getElementById('notificationToggle').addEventListener('click', function() {});
+
         });
     </script>
 
