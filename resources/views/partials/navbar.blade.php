@@ -9,6 +9,23 @@
 
 <body>
 
+    <style>
+        /* Styling untuk indikator notifikasi (titik merah) */
+        .notification-badge {
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: translate(50%, -50%);
+            background-color: red;
+            color: white;
+            font-size: 10px;
+            padding: 5px;
+            border-radius: 50%;
+            display: none;
+            animation: pulse 1s infinite;
+            /* Menambahkan animasi pulse */
+        }
+    </style>
 
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand bg-secondary navbar-dark sticky-top px-4 py-0">
