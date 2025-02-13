@@ -67,11 +67,6 @@
         <form action="{{ route('tasks.store') }}" method="POST" class="modal-content bg-secondary text-light">
             @method('POST')
             @csrf
-            <div class="modal-header border-0">
-                <h1 class="modal-title fs-5" id="addTaskModalLabel">Edit Task</h1>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                    aria-label="Close"></button>
-            </div>
         </form>
     </div>
 </div>
