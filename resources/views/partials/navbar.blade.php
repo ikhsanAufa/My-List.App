@@ -84,6 +84,8 @@
             document.getElementById('notificationToggle').addEventListener('click', function() {
                 // Menyembunyikan indikator setelah notifikasi dibaca
                 document.getElementById('notificationBadge').classList.remove('show');
+                // Menghapus notifikasi setelah diklik (menghapus dari localStorage)
+                localStorage.removeItem('notification');
             });
 
         });
