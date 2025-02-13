@@ -9,6 +9,7 @@
 
 <body>
 
+
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand bg-secondary navbar-dark sticky-top px-4 py-0">
         <a href="index.html" class="navbar-brand d-flex d-lg-none me-4">
@@ -28,11 +29,28 @@
         </div>
 
 
+        <div class="navbar-nav align-items-center ms-auto">
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" id="notificationToggle">
+                    <i class="fa fa-bell me-lg-2 position-relative">
+                        <!-- Indikator notifikasi baru (titik merah) -->
+                        <span id="notificationBadge" class="notification-badge"></span>
+                    </i>
+                    <span class="d-none d-lg-inline-flex">Notifikasi</span>
+                </a>
+                <div id="notificationDropdown"
+                    class="dropdown-menu dropdown-menu-end bg-secondary text-white border-primary border-7 border-color rounded-3 rounded-bottom m-0">
+                    <!-- Notifikasi akan muncul di sini -->
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
 
-        <!-- Bootstrap JS dan dependencies -->
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"></script>
+    <!-- Bootstrap JS dan dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"></script>
 
 </body>
 
