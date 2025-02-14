@@ -18,6 +18,13 @@ class TaskController extends Controller
                 ->latest()
                 ->get();
         } 
+        
+        else {
+            $tasks = Task::latest()->get();
+            $lists = TaskList::with('tasks')->get();
+        }
+
+        return view('pages.home', $data);
     }
 
 
