@@ -76,6 +76,13 @@ class TaskController extends Controller
             'priority' => 'required|in:low,medium,high'
         ]);
 
+        Task::findOrFail($task->id)->update([
+            'list_id' => $request->list_id,
+            'name' => $request->name,
+            'description' => $request->description,
+            'priority' => $request->priority
+        ]);
+
         return redirect()->back()->with('success', 'Task berhasil diperbarui!');
     }
 }
