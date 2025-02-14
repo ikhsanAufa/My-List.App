@@ -17,6 +17,14 @@ class TaskController extends Controller
                 ->orWhere('description', 'like', "%{$query}%")
                 ->latest()
                 ->get();
+
+            $lists = TaskList::where('name', 'like', "%{$query}%")
+                ->orWhereHas('tasks', function ($q) use ($query) {
+                    $q->where('name', 'like', "%{$query}%")
+                        ->orWhere('description', 'like', "%{$query}%");
+                })
+                ->with('tasks')
+                ->get();
         } 
         
         else {
