@@ -8,6 +8,18 @@ use Illuminate\Http\Request;
 
 class TaskController extends Controller
 {
+    public function index(Request $request)
+    {
+        $query = $request->input('query');
+
+        if ($query) {
+            $tasks = Task::where('name', 'like', "%{$query}%")
+                ->orWhere('description', 'like', "%{$query}%")
+                ->latest()
+                ->get();
+        } 
+    }
+
 
     public function store(Request $request)
     {
