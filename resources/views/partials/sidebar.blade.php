@@ -28,6 +28,7 @@
                 <span class="fs-2 my-3">
                     <a href="https://www.instagram.com/icaannzz/?igsh=bndqYXRob3ozdGI4#"><i
                             class="bi bi-instagram mx-4 text-primary"></i></a>
+                    <i class="bi bi-whatsapp mx-1"></i>
                 </span>
             </div>
         </nav>
