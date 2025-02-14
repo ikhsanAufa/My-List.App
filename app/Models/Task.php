@@ -40,3 +40,4 @@ class Task extends Model
         return $this->belongsTo(TaskList::class, 'list_id');
     }
 }
+

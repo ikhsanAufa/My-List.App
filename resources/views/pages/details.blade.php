@@ -8,6 +8,65 @@
                 <span class="fw-bold fs-5">Kembali</span>
             </a>
         </div>
+
+        <div class="row my-3">
+            <div class="col-8">
+                <div class="card bg-secondary" style="height: 80vh;">
+                    <div class="card-header d-flex align-items-center bg-primary justify-content-between overflow-hidden">
+                        <h3 class="fw-bold text-truncate mb-0" style="width: 80%">
+                            {{ $task->name }}
+                            <span class="fs-6 fw-medium">Berada di List {{ $task->list->name }}</span>
+                        </h3>
+                        <button type="button" class="btn btn-sm btn-outline-dark" data-bs-toggle="modal"
+                            data-bs-target="#editTaskModal">
+                            <i class="bi bi-pencil-square"></i>
+                        </button>
+                    </div>
+                    <div class="card-body">
+                        <p>
+                            {{ $task->description }}
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <form action="{{ route('tasks.destroy', $task->id) }}" method="POST" style="display: inline;">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" type="button" class="btn btn-sm btn-outline-primary w-100">
+                                Hapus
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card bg-primary" style="height: 80vh;">
+                    <div class="card-header d-flex align-items-center bg-dark justify-content-between overflow-hidden">
+                        <h3 class="fw-bold fs-4 text-truncate mb-0" style="width: 80%">Details</h3>
+                    </div>
+                    <div class="card-body d-flex flex-column gap-2">
+                        <form action="{{ route('tasks.changeList', $task->id) }}" method="POST">
+                            @csrf
+                            @method('PATCH')
+                            <select class="form-select" name="list_id" onchange="this.form.submit()">
+                                @foreach ($lists as $list)
+                                    <option value="{{ $list->id }}" {{ $list->id == $task->list_id ? 'selected' : '' }}>
+                                        {{ $list->name }}
+                                    </option>
+                                @endforeach
+                            </select>
+                        </form>
+                        <h6 class="fs-6">
+                            Priotitas:
+                            <span class="badge text-bg-{{ $task->priorityClass }} badge-pill" style="width: fit-content">
+                                {{ $task->priority }}
+                            </span>
+                        </h6>
+                    </div>
+                    <div class="card-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="modal fade" id="editTaskModal" tabindex="-1" aria-labelledby="editTaskModalLabel" aria-hidden="true">
@@ -23,8 +82,8 @@
                     <input type="text" value="{{ $task->list_id }}" name="list_id" hidden>
                     <div class="mb-3">
                         <label for="name" class="form-label">Nama</label>
-                        <input type="text" class="form-control" id="name" name="name" value="{{ $task->name }}"
-                            placeholder="Masukkan nama list">
+                        <input type="text" class="form-control" id="name" name="name"
+                            value="{{ $task->name }}" placeholder="Masukkan nama list">
                     </div>
                     <div class="mb-3">
                         <label for="description" class="form-label">Deskripsi</label>

@@ -12,11 +12,14 @@ class TaskListController extends Controller
             'name' => 'required|max:100'
         ]);
 
-        TaskList::create([
+        $list = TaskList::create([
             'name' => $request->name
         ]);
 
-        return redirect()->back();
+        return redirect()->back()->with("success", "Lists $list->name berhasil dibuat.");
+        // Di controller, ketika berhasil melakukan aksi
+        session()->flash('success', 'Aksi berhasil!');
+
     }
 
     public function destroy($id) {
