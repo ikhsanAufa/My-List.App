@@ -24,6 +24,13 @@ class TaskController extends Controller
             $lists = TaskList::with('tasks')->get();
         }
 
+        $data = [
+            'title' => 'Home',
+            'lists' => $lists,
+            'tasks' => $tasks,
+            'priorities' => Task::PRIORITIES
+        ];
+
         return view('pages.home', $data);
     }
 
