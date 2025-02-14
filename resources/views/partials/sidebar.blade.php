@@ -29,6 +29,7 @@
                     <a href="https://www.instagram.com/icaannzz/?igsh=bndqYXRob3ozdGI4#"><i
                             class="bi bi-instagram mx-4 text-primary"></i></a>
                     <i class="bi bi-whatsapp mx-1"></i>
+                    <a href="https://github.com/ikhsanAufa"><i class="bi bi-github mx-4 text-primary"></i></a>
                 </span>
             </div>
         </nav>
