@@ -21,6 +21,11 @@ return new class extends Migration
             $table->timestamps();
 
             $table->foreignId('list_id')->constrained('task_lists', 'id')->onDelete('cascade');
+            // foreignId di Laravel adalah cara yang digunakan untuk mendefinisikan kolom foreign key dalam migrasi yang menghubungkan tabel satu dengan tabel lainnya.
+
+            // constrained() di Laravel adalah metode yang digunakan untuk secara otomatis mendefinisikan dan menambahkan foreign key constraint pada kolom yang digunakan sebagai foreign key di dalam migrasi.
+
+            // onDelete adalah pengaturan yang digunakan pada foreign key untuk menentukan apa yang terjadi pada data terkait saat data yang dirujuk dihapus.
         });
     }
 
