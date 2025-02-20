@@ -29,5 +29,6 @@ class TaskListSeeder extends Seeder
         ];
 
         TaskList::insert($lists);
+        //TaskList::insert($lists); adalah perintah di Laravel yang digunakan untuk memasukkan data secara langsung ke dalam tabel task_lists
     }
 }
