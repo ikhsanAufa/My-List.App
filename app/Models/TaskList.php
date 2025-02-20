@@ -1,8 +1,16 @@
 <?php
+// session table adalah sebuah tabel di database yang digunakan untuk menyimpan data sesi pengguna. Sesi (session) di Laravel adalah cara untuk menyimpan informasi tentang pengguna di antara permintaan (requests), seperti status login, preferensi pengguna, atau informasi lainnya yang perlu dipertahankan selama pengguna mengunjungi aplikasi.
 
 namespace App\Models;
+// Namespace adalah cara untuk mengelompokkan kelas (class), interface, atau fungsi dalam sebuah ruang nama yang terpisah. Ini memungkinkan pengembang untuk menghindari tabrakan nama antara kelas-kelas yang berbeda.
+
+// App adalah namespace dasar dalam aplikasi Laravel yang biasanya mewakili direktori app/ pada struktur proyek Laravel.
+// Models adalah sub-namespace di dalam App, yang biasanya berisi kelas-kelas yang terkait dengan Model. Model ini berfungsi untuk berinteraksi dengan tabel-tabel di database.
 
 use Illuminate\Database\Eloquent\Model;
+// use adalah perintah dalam PHP yang digunakan untuk mengimpor kelas, interface, atau namespace lain ke dalam file PHP, sehingga kamu bisa menggunakan kelas tersebut tanpa perlu menuliskan namespace lengkap setiap kali.
+
+// Illuminate\Database\Eloquent\Model adalah kelas dasar (base class) di Laravel yang digunakan untuk membuat model Eloquent. Model ini adalah representasi objek dari tabel di database.
 
 class TaskList extends Model
 {
