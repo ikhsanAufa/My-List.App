@@ -1,6 +1,4 @@
 <?php
-// session table adalah sebuah tabel di database yang digunakan untuk menyimpan data sesi pengguna. Sesi (session) di Laravel adalah cara untuk menyimpan informasi tentang pengguna di antara permintaan (requests), seperti status login, preferensi pengguna, atau informasi lainnya yang perlu dipertahankan selama pengguna mengunjungi aplikasi.
-
 namespace App\Models;
 // Namespace adalah cara untuk mengelompokkan kelas (class), interface, atau fungsi dalam sebuah ruang nama yang terpisah. Ini memungkinkan pengembang untuk menghindari tabrakan nama antara kelas-kelas yang berbeda.
 

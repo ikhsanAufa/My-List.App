@@ -1,7 +1,12 @@
 <?php
+// session table adalah sebuah tabel di database yang digunakan untuk menyimpan data sesi pengguna. Sesi (session) di Laravel adalah cara untuk menyimpan informasi tentang pengguna di antara permintaan (requests), seperti status login, preferensi pengguna, atau informasi lainnya yang perlu dipertahankan selama pengguna mengunjungi aplikasi.
 
 use Illuminate\Database\Migrations\Migration;
+// use Illuminate\Database\Migrations\Migration; adalah perintah use yang digunakan untuk mengimpor kelas Migration dari namespace Illuminate\Database\Migrations.
+
 use Illuminate\Database\Schema\Blueprint;
+// use Illuminate\Database\Schema\Blueprint; adalah perintah untuk mengimpor kelas Blueprint di Laravel, yang digunakan untuk mendefinisikan struktur tabel di database saat membuat atau mengubah tabel dalam file migrasi.
+
 use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
