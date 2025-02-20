@@ -1,4 +1,5 @@
 <?php
+// Task table di Laravel adalah sebuah tabel database yang menyimpan informasi terkait tugas yang perlu dikelola oleh pengguna.
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
